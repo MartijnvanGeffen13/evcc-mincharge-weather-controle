@@ -235,6 +235,6 @@ Function Update-SunHours
         $Global:Config.'Weather.SunHoursTotalAverage' = $TotalSunHours / 3
         $Global:Config.'Weather.SunHoursToday' = $SunHours.SunHours[0]
     }else{
-        Write-LogEntry -Severity 1 -Message "Overwrite of 0 place so skipping weather control"
+        Write-LogEntry -Severity 1 -Message "Overwrite of minsoc 0 in place so skipping weather control"
     }    
 }
