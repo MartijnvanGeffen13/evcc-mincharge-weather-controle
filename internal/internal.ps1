@@ -108,7 +108,7 @@ Function Write-LogEntry
     #Information
     If ($Severity -eq 0){
         If ($Global:Config.'Log.Level' -ge 0){
-            "$(Get-Date -Format "yyyyMMdd-HHmm ")Info: $Message" | Out-File -Append -FilePath ./volvo4evcc.log
+            "$(Get-Date -Format "yyyyMMdd-HHmm ")Info: $Message" | Out-File -Append -FilePath ./evcc-mincharge-weather-controle.log
             
         }
         Write-Host -Message $Message
@@ -117,7 +117,7 @@ Function Write-LogEntry
     #Warning
     If ($Severity -eq 1){
         If ($Global:Config.'Log.Level' -ge 1){
-            "$(Get-Date -Format "yyyyMMdd-HHmm ")Warning: $Message" | Out-File -Append -FilePath ./volvo4evcc.log
+            "$(Get-Date -Format "yyyyMMdd-HHmm ")Warning: $Message" | Out-File -Append -FilePath ./evcc-mincharge-weather-controle.log
             
         }
         Write-Warning -Message $Message
@@ -126,7 +126,7 @@ Function Write-LogEntry
     #Debug
     If ($Severity -eq 2){
         If ($Global:Config.'Log.Level' -ge 2){
-            "$(Get-Date -Format "yyyyMMdd-HHmm ")Debug: $Message" | Out-File -Append -FilePath ./volvo4evcc.log
+            "$(Get-Date -Format "yyyyMMdd-HHmm ")Debug: $Message" | Out-File -Append -FilePath ./evcc-mincharge-weather-controle.log
             
         }
         Write-Debug -Message $Message   
